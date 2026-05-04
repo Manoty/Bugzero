@@ -6,7 +6,7 @@ import AdminLayout                 from '../../components/admin/AdminLayout'
 import { StatusBadge, UrgencyBadge } from '../../components/admin/BookingStatusBadge'
 import Button                      from '../../components/ui/Button'
 import { updateBooking }           from '../../api/services'
-import client                      from '../../api/client'
+import client                      from '../../api/axios'
 
 const STATUS_OPTIONS = ['pending', 'confirmed', 'completed', 'cancelled']
 

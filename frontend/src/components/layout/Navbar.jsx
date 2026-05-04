@@ -30,6 +30,7 @@ export default function Navbar() {
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-6">
             {links.map(l => (
+                <a
               
                 key={l.href}
                 href={l.href}
@@ -64,6 +65,7 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden border-t border-gray-100 bg-white px-4 py-4 space-y-3">
           {links.map(l => (
+                <a
             
               key={l.href}
               href={l.href}

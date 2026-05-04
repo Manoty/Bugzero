@@ -1,4 +1,4 @@
-import client from './client'
+import client from './axios'
 
 export const getServices = () => client.get('/services/')
 export const getCategories = () => client.get('/services/categories/')

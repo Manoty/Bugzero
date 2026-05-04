@@ -65,14 +65,17 @@ export default function Navbar() {
 
             {/* ── Desktop CTAs ── */}
             <div className="hidden lg:flex items-center gap-3">
+                <a
               
                 href="tel:+254700000000"
                 className={`flex items-center gap-2 text-sm font-medium transition-colors ${
                   scrolled ? 'text-gray-700 hover:text-green-600' : 'text-white/90 hover:text-green-300'
                 }`}
+                >
                 
                 <Phone size={14} />
                 +254 700 000 000
+                </a>
               
               <Link
                 to="/quote"

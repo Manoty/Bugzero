@@ -23,6 +23,8 @@ INSTALLED_APPS = [
     'services',
     'bookings',
     'analytics',
+    
+    'django_filters',
 ]
 
 MIDDLEWARE = [

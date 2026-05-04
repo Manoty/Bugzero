@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { Bug, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
+import { Bug, Phone, Mail, MapPin } from 'lucide-react'
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 
 const SERVICES_LINKS = [
   'Residential Fumigation',
@@ -22,10 +23,10 @@ const QUICK_LINKS = [
 ]
 
 const SOCIALS = [
-  { icon: Facebook,  href: '#', label: 'Facebook'  },
-  { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Twitter,   href: '#', label: 'Twitter'   },
-  { icon: Youtube,   href: '#', label: 'YouTube'   },
+  { icon: FaFacebook,  href: '#', label: 'Facebook'  },
+  { icon: FaInstagram, href: '#', label: 'Instagram' },
+  { icon: FaTwitter,   href: '#', label: 'Twitter'   },
+  { icon: FaYoutube,   href: '#', label: 'YouTube'   },
 ]
 
 export default function Footer() {
@@ -39,8 +40,10 @@ export default function Footer() {
             <div className="w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse" />
             <span className="text-white font-medium text-sm">Emergency line active 24/7</span>
           </div>
-          <a href="tel:+254700000000"
-            className="flex items-center gap-2 text-green-400 hover:text-green-300 font-bold text-lg transition-colors">
+          <a
+            href="tel:+254700000000"
+            className="flex items-center gap-2 text-green-400 hover:text-green-300 font-bold text-lg transition-colors"
+          >
             <Phone size={18} />
             +254 700 000 000
           </a>
@@ -61,6 +64,7 @@ export default function Footer() {
                 FumiPro<span className="text-green-400">KE</span>
               </span>
             </Link>
+
             <p className="text-sm text-gray-500 leading-relaxed mb-5">
               Kenya's most trusted fumigation and pest control professionals. Licensed, insured, and results guaranteed since 2015.
             </p>
@@ -68,8 +72,12 @@ export default function Footer() {
             {/* Socials */}
             <div className="flex gap-3">
               {SOCIALS.map(({ icon: Icon, href, label }) => (
-                <a key={label} href={href} aria-label={label}
-                  className="w-9 h-9 bg-gray-800 hover:bg-green-600 text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-200">
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  className="w-9 h-9 bg-gray-800 hover:bg-green-600 text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-200"
+                >
                   <Icon size={16} />
                 </a>
               ))}
@@ -82,8 +90,10 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {SERVICES_LINKS.map(s => (
                 <li key={s}>
-                  <a href="/#services"
-                    className="text-sm text-gray-500 hover:text-green-400 transition-colors flex items-center gap-1.5">
+                  <a
+                    href="/#services"
+                    className="text-sm text-gray-500 hover:text-green-400 transition-colors flex items-center gap-1.5"
+                  >
                     <span className="w-1 h-1 bg-gray-600 rounded-full" />
                     {s}
                   </a>
@@ -98,8 +108,10 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {QUICK_LINKS.map(({ label, href }) => (
                 <li key={label}>
-                  <Link to={href}
-                    className="text-sm text-gray-500 hover:text-green-400 transition-colors flex items-center gap-1.5">
+                  <Link
+                    to={href}
+                    className="text-sm text-gray-500 hover:text-green-400 transition-colors flex items-center gap-1.5"
+                  >
                     <span className="w-1 h-1 bg-gray-600 rounded-full" />
                     {label}
                   </Link>
@@ -113,7 +125,10 @@ export default function Footer() {
             <h4 className="text-white font-semibold text-sm mb-5 uppercase tracking-wide">Contact</h4>
             <ul className="space-y-4">
               <li>
-                <a href="tel:+254700000000" className="flex items-start gap-3 text-sm hover:text-green-400 transition-colors">
+                <a
+                  href="tel:+254700000000"
+                  className="flex items-start gap-3 text-sm hover:text-green-400 transition-colors"
+                >
                   <Phone size={15} className="text-green-500 mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="text-white font-medium">+254 700 000 000</p>
@@ -121,8 +136,12 @@ export default function Footer() {
                   </div>
                 </a>
               </li>
+
               <li>
-                <a href="mailto:info@fumiproke.co.ke" className="flex items-start gap-3 text-sm hover:text-green-400 transition-colors">
+                <a
+                  href="mailto:info@fumiproke.co.ke"
+                  className="flex items-start gap-3 text-sm hover:text-green-400 transition-colors"
+                >
                   <Mail size={15} className="text-green-500 mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="text-white font-medium">info@fumiproke.co.ke</p>
@@ -130,6 +149,7 @@ export default function Footer() {
                   </div>
                 </a>
               </li>
+
               <li className="flex items-start gap-3 text-sm">
                 <MapPin size={15} className="text-green-500 mt-0.5 flex-shrink-0" />
                 <div>
@@ -142,7 +162,10 @@ export default function Footer() {
             {/* Certifications */}
             <div className="mt-6 flex flex-wrap gap-2">
               {['PCPB', 'KEBS', 'NEMA'].map(c => (
-                <span key={c} className="text-xs bg-gray-800 text-gray-400 border border-gray-700 px-2.5 py-1 rounded-full">
+                <span
+                  key={c}
+                  className="text-xs bg-gray-800 text-gray-400 border border-gray-700 px-2.5 py-1 rounded-full"
+                >
                   {c} Certified
                 </span>
               ))}
